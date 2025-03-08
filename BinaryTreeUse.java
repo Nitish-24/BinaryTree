@@ -1,5 +1,20 @@
 public class BinaryTreeUse {
  
+    public static void printTreeDetail(BinaryTree<Integer> root){
+        if (root==null) {
+            return;
+        }
+        System.out.print(root.data+ " :");
+        if (root.left!=null) {
+            System.out.print("L"+ root.left.data + ",");
+        }
+        if (root.right!=null) {
+            System.out.print("R"+ root.right.data);
+        }
+        System.out.println();
+        printTreeDetail(root.left);
+        printTreeDetail(root.right);
+    }
     public static void printTree(BinaryTree<Integer> root){
         if (root==null) {
             return;
@@ -19,6 +34,7 @@ public class BinaryTreeUse {
         BinaryTree<Integer>rootrightleft = new BinaryTree<Integer>(50);
         rootLeft.right =rootleftRight;
         rootRight.left = rootrightleft;
-        printTree(root);
+        // printTree(root);
+        printTreeDetail(root);
     }
 }
