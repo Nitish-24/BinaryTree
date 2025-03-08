@@ -1,5 +1,24 @@
+import java.util.Scanner;
+
 public class BinaryTreeUse {
- 
+  
+    public static BinaryTree<Integer>takeBinaryTree(){
+        System.out.println("Enter data:");
+        Scanner scn = new Scanner(System.in);
+        int rootData = scn.nextInt();
+        scn.close();
+        if (rootData==-1) {
+            return null;
+        }
+        BinaryTree<Integer> root = new BinaryTree<Integer>(rootData);
+        BinaryTree<Integer> rootLeft = takeBinaryTree();
+        BinaryTree<Integer> rootRight = takeBinaryTree();
+        root.left = rootLeft;
+        root.right = rootRight;
+        return root;
+       
+    }
+
     public static void printTreeDetail(BinaryTree<Integer> root){
         if (root==null) {
             return;
