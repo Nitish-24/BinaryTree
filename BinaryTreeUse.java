@@ -79,9 +79,10 @@ public class BinaryTreeUse {
         // rootLeft.right =rootleftRight;
         // rootRight.left = rootrightleft;
         // printTree(root);
-        BinaryTree<Integer> root = takeBinaryTreeBetter(true,0,true);
+        // BinaryTree<Integer> root = takeBinaryTreeBetter(true,0,true);
+        BinaryTree<Integer> root = InputLevelWise.inputLevelWise();
         printTreeDetail(root);
-       System.out.println(NoOfNodes.numberOfNodes(root)); 
+    //    System.out.println(NoOfNodes.numberOfNodes(root)); 
     }
 }
  
