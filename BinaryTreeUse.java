@@ -12,6 +12,7 @@ public class BinaryTreeUse {
                 System.out.println("Enter right child data of:"+ parentData);
             }
         }
+        @SuppressWarnings("resource")
         Scanner scn = new Scanner(System.in);
         int rootData = scn.nextInt();
         // scn.close();
